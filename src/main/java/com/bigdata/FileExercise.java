@@ -42,6 +42,20 @@ public class FileExercise {
         return br.readLine();
     }
 
+    private String readAll() throws IOException {
+        FileReader fileReader = new FileReader(this.filename);
+        BufferedReader br = new BufferedReader(fileReader);
+
+        StringBuilder sb = new StringBuilder();
+        String str;
+        while((str = br.readLine()) != null) {
+            sb.append(str);
+            sb.append("\n");  // 줄바꿈
+        }
+
+        return sb.toString();
+    }
+
     public static void main(String[] args) throws IOException {
         FileExercise fileExercise = new FileExercise("./hello.txt");
 
@@ -54,8 +68,10 @@ public class FileExercise {
 //        System.out.println(str);
 
         String str1 = fileExercise.readALine();
-        System.out.println(str1);
+//        System.out.println(str1);
 
+        String str2 = fileExercise.readAll();
+        System.out.println(str2);
     }
 
 }
