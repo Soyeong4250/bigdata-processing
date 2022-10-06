@@ -61,15 +61,26 @@ public class FileExercise {
 
         // fileExercise.exploreDirectory();
 
+
+        System.out.println("한 글자 읽기");
         char ch = fileExercise.readAChar();
-        // System.out.println(ch);
+        System.out.println(ch);
 
+        System.out.println("----------------------------");
+
+        System.out.println("N 글자 읽기");
         String str = fileExercise.readChars(3);
-//        System.out.println(str);
+        System.out.println(str);
 
+        System.out.println("----------------------------");
+
+        System.out.println("한 줄 읽기");
         String str1 = fileExercise.readALine();
-//        System.out.println(str1);
+        System.out.println(str1);
 
+        System.out.println("----------------------------");
+
+        System.out.println("N 줄 읽기");
         String str2 = fileExercise.readAll();
         System.out.println(str2);
     }
