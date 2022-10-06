@@ -1,9 +1,6 @@
 package com.bigdata;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 
 public class FileExercise {
     private String filename;
@@ -38,6 +35,13 @@ public class FileExercise {
         return sb.toString();
     }
 
+    private String readALine() throws IOException {
+        FileReader fileReader = new FileReader(this.filename);
+        BufferedReader br = new BufferedReader(fileReader);
+
+        return br.readLine();
+    }
+
     public static void main(String[] args) throws IOException {
         FileExercise fileExercise = new FileExercise("./hello.txt");
 
@@ -47,7 +51,10 @@ public class FileExercise {
         // System.out.println(ch);
 
         String str = fileExercise.readChars(3);
-        System.out.println(str);
+//        System.out.println(str);
+
+        String str1 = fileExercise.readALine();
+        System.out.println(str1);
 
     }
 
