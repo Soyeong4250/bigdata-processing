@@ -3,9 +3,6 @@ package com.bigdata.parser;
 import org.mozilla.universalchardet.UniversalDetector;
 
 import java.io.*;
-import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -42,13 +39,13 @@ public class FileController<T> {
         return encoding;
     }
 
-    public List<T> readLines(String path) throws IOException {
+    public List<T> readLines(String path, String encoding) throws IOException {
         List<T> fileContents = new ArrayList<>();
 
         BufferedReader br;
 
 
-        br = Files.newBufferedReader(Paths.get(path), StandardCharsets.UTF_8);
+        br = new BufferedReader(new InputStreamReader(new FileInputStream(path), "EUC_KR"));
         String line;
         br.readLine();
         while((line = br.readLine()) != null) {
