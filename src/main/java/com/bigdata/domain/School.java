@@ -2,7 +2,7 @@ package com.bigdata.domain;
 
 import java.time.LocalDateTime;
 
-public class Hospital {
+public class School {
     private String id;
     private String name;
     private String grade;
@@ -18,7 +18,10 @@ public class Hospital {
     private Float latitude;  // 위도
     private Float longitude;  // 경도
 
-    public Hospital(String id, String name, String grade, String anniversary, LocalDateTime establishForm, String mainSchool, String jiBunAddress, String roadNameAddress, String sidoOfficeOfEducationCode, String sidoOfficeOfEducation, String smallOfficeOfEducationCode, String getSmallOfficeOfEducation, Float latitude, Float longitude) {
+    public School() {
+    }
+
+    public School(String id, String name, String grade, String anniversary, LocalDateTime establishForm, String mainSchool, String jiBunAddress, String roadNameAddress, String sidoOfficeOfEducationCode, String sidoOfficeOfEducation, String smallOfficeOfEducationCode, String getSmallOfficeOfEducation, Float latitude, Float longitude) {
         this.id = id;
         this.name = name;
         this.grade = grade;
