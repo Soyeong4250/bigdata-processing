@@ -1,2 +1,7 @@
-package com.bigdata.parser;public interface Parser {
+package com.bigdata.parser;
+
+import com.bigdata.domain.School;
+
+public interface Parser {
+    School parse(String str);
 }
