@@ -1,4 +1,4 @@
-package com.bigdata;
+package com.bigdata.parser;
 
 import java.io.*;
 
