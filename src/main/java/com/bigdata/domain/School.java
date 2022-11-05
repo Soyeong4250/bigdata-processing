@@ -6,28 +6,30 @@ public class School {
     private String id;
     private String name;
     private String grade;
-    private String anniversary;
-    private LocalDateTime establishForm;
-    private String mainSchool;
+    private LocalDateTime anniversary;
+    private String establishForm;
+    private boolean mainSchool;
+    private String operationalStatus;
     private String jiBunAddress;
     private String roadNameAddress;
     private String sidoOfficeOfEducationCode;
     private String sidoOfficeOfEducation;
     private String smallOfficeOfEducationCode;
     private String smallOfficeOfEducation;
-    private Float latitude;  // 위도
-    private Float longitude;  // 경도
+    private Double latitude;  // 위도
+    private Double longitude;  // 경도
 
     public School() {
     }
 
-    public School(String id, String name, String grade, String anniversary, LocalDateTime establishForm, String mainSchool, String jiBunAddress, String roadNameAddress, String sidoOfficeOfEducationCode, String sidoOfficeOfEducation, String smallOfficeOfEducationCode, String smallOfficeOfEducation, Float latitude, Float longitude) {
+    public School(String id, String name, String grade, LocalDateTime anniversary, String establishForm, boolean mainSchool, String operationalStatus, String jiBunAddress, String roadNameAddress, String sidoOfficeOfEducationCode, String sidoOfficeOfEducation, String smallOfficeOfEducationCode, String smallOfficeOfEducation, Double latitude, Double longitude) {
         this.id = id;
         this.name = name;
         this.grade = grade;
         this.anniversary = anniversary;
         this.establishForm = establishForm;
         this.mainSchool = mainSchool;
+        this.operationalStatus = operationalStatus;
         this.jiBunAddress = jiBunAddress;
         this.roadNameAddress = roadNameAddress;
         this.sidoOfficeOfEducationCode = sidoOfficeOfEducationCode;
@@ -50,16 +52,20 @@ public class School {
         return grade;
     }
 
-    public String getAnniversary() {
+    public LocalDateTime getAnniversary() {
         return anniversary;
     }
 
-    public LocalDateTime getEstablishForm() {
+    public String getEstablishForm() {
         return establishForm;
     }
 
-    public String getMainSchool() {
+    public boolean getMainSchool() {
         return mainSchool;
+    }
+
+    public String getOperationalStatus() {
+        return operationalStatus;
     }
 
     public String getJiBunAddress() {
@@ -82,15 +88,15 @@ public class School {
         return smallOfficeOfEducationCode;
     }
 
-    public String getGetSmallOfficeOfEducation() {
+    public String getSmallOfficeOfEducation() {
         return smallOfficeOfEducation;
     }
 
-    public Float getLatitude() {
+    public Double getLatitude() {
         return latitude;
     }
 
-    public Float getLongitude() {
+    public Double getLongitude() {
         return longitude;
     }
 
