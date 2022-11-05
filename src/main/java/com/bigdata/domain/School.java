@@ -106,7 +106,7 @@ public class School {
                 "(\"%s\", \"%s\", \"%s\", \"%s\", \"%s\", \"%s\", \"%s\",\n" +
                 "\"%s\", \"%s\", \"%s\", \"%s\", \"%s\", \"%s\", \"%s\")",
                 this.id, this.name, this.grade, this.anniversary, this.establishForm, this.mainSchool, this.jiBunAddress,
-                this.roadNameAddress, this.sidoOfficeOfEducationCode, this.sidoOfficeOfEducation, this.sidoOfficeOfEducationCode, this.smallOfficeOfEducation, this.latitude, this.longitude);
+                this.roadNameAddress, this.sidoOfficeOfEducationCode, this.sidoOfficeOfEducation, this.smallOfficeOfEducationCode, this.smallOfficeOfEducation, this.latitude, this.longitude);
         return sql;
     }
 
@@ -114,7 +114,7 @@ public class School {
         String sql = String.format("(\"%s\", \"%s\", \"%s\", \"%s\", \"%s\", \"%s\", \"%s\",\n" +
                 "\"%s\", \"%s\", \"%s\", \"%s\", \"%s\", \"%s\", \"%s\")",
                 this.id, this.name, this.grade, this.anniversary, this.establishForm, this.mainSchool, this.jiBunAddress,
-                this.roadNameAddress, this.sidoOfficeOfEducationCode, this.sidoOfficeOfEducation, this.sidoOfficeOfEducationCode, this.smallOfficeOfEducation, this.latitude, this.longitude);
+                this.roadNameAddress, this.sidoOfficeOfEducationCode, this.sidoOfficeOfEducation, this.smallOfficeOfEducationCode, this.smallOfficeOfEducation, this.latitude, this.longitude);
 
         return sql;
     }
