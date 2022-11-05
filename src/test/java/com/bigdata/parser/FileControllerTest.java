@@ -18,7 +18,7 @@ class FileControllerTest {
     @Order(1)
     @DisplayName("인코딩 확인 테스트")
     void findFlieEncoding() throws IOException {
-        path = "C:\\pjt\\전국초중등학교위치표준데이터.csv";
+        path = "C:\\PJT\\전국초중등학교위치표준데이터.csv";
         fileController = new FileController(new SchoolParser());
 
         String encoding = fileController.findFileEncoding(path);
@@ -31,7 +31,7 @@ class FileControllerTest {
     @DisplayName("대용량 데이터 파일을 잘 읽어오는지 테스트")
     void readLinesTest() throws IOException {
         FileController<School> schoolFileController = new FileController<>(new SchoolParser());
-        String filename = "C:\\pjt\\전국초중등학교위치표준데이터.csv";
+        String filename = "C:\\PJT\\전국초중등학교위치표준데이터.csv";
         String encoding = schoolFileController.findFileEncoding(filename);
         List<School> schoolsList = schoolFileController.readLines(filename, encoding);
 
