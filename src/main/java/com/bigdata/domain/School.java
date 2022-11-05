@@ -111,7 +111,8 @@ public class School {
     }
 
     public String getTupleString() {
-        String sql = String.format("(\"%s\", \"%s\", \"%s\", \"%s\", \"%s\", \"%s\", \"%s\", \"%s\",\n" +
+        String sql = ",\n";
+        sql += String.format("(\"%s\", \"%s\", \"%s\", \"%s\", \"%s\", \"%s\", \"%s\", \"%s\",\n" +
                 "\"%s\", \"%s\", \"%s\", \"%s\", \"%s\", \"%s\", \"%s\")",
                 this.id, this.name, this.grade, this.anniversary, this.establishForm, this.mainSchool, this.operationalStatus, this.jiBunAddress,
                 this.roadNameAddress, this.sidoOfficeOfEducationCode, this.sidoOfficeOfEducation, this.smallOfficeOfEducationCode, this.smallOfficeOfEducation, this.latitude, this.longitude);
