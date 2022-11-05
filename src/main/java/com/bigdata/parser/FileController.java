@@ -55,11 +55,24 @@ public class FileController<T> {
         return fileContents;
     }
 
-    public void createNewSqlFile(String filename) {
-        File file = new File(filename);
+    public void createNewSqlFile(String newFilename) {
+        File file = new File(newFilename);
         try {
             file.createNewFile();
             System.out.println("파일이 존재하는지 ? : " + file.exists());
+        } catch (IOException e) {
+            e.printStackTrace();
+            throw new RuntimeException(e);
+        }
+    }
+
+    public void writeContents(String queries, String newFilename) {
+        File file = new File(newFilename);
+
+        try{
+            BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(file), "UTF-8"));
+            bw.write(queries);
+            bw.close();
         } catch (IOException e) {
             e.printStackTrace();
             throw new RuntimeException(e);
