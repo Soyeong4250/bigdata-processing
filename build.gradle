@@ -13,7 +13,6 @@ dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
     implementation files("libs/juniversalchardet-1.0.3.jar")
-    implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.30'
 }
 
 test {
