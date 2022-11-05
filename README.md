@@ -50,7 +50,7 @@ https://www.data.go.kr/data/15021148/standard.do
 | 진행상태             | 구현 Method                                                | 진행 날짜  |
 | -------------------- | ---------------------------------------------------------- | ---------- |
 | :white_check_mark:   | [파일-읽기](README/파일-읽기.md)                           | 2022.10.06 |
-| :white_large_square: | [대용량-데이터-읽기](README/대용량-데이터-읽기.md)         | 2022.10.07 |
+| :white_check_mark:   | [대용량-데이터-읽기](README/대용량-데이터-읽기.md)         | 2022.10.07 |
 | :white_large_square: | [대용량-데이터-가공하기](README/대용량-데이터-가공하기.md) |            |
 | :white_large_square: | [읽은-파일-저장하기](README/읽은-파일-저장하기.md)         |            |
 
