@@ -18,7 +18,6 @@ class SchoolTest {
         School school1 = schoolParser.parse(line1);
         StringBuilder sql = new StringBuilder();
         sql.append(school1.getSqlInsertQuery());
-        sql.append(",\n");
         School school2 = schoolParser.parse(line2);
         sql.append(school2.getTupleString());
         String result = "INSERT INTO `test-db`.`nation_wide_school`\n" +
