@@ -54,4 +54,15 @@ public class FileController<T> {
 
         return fileContents;
     }
+
+    public void createNewSqlFile(String filename) {
+        File file = new File(filename);
+        try {
+            file.createNewFile();
+            System.out.println("파일이 존재하는지 ? : " + file.exists());
+        } catch (IOException e) {
+            e.printStackTrace();
+            throw new RuntimeException(e);
+        }
+    }
 }
