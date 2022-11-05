@@ -14,14 +14,14 @@ public class School {
     private String sidoOfficeOfEducationCode;
     private String sidoOfficeOfEducation;
     private String smallOfficeOfEducationCode;
-    private String getSmallOfficeOfEducation;
+    private String smallOfficeOfEducation;
     private Float latitude;  // 위도
     private Float longitude;  // 경도
 
     public School() {
     }
 
-    public School(String id, String name, String grade, String anniversary, LocalDateTime establishForm, String mainSchool, String jiBunAddress, String roadNameAddress, String sidoOfficeOfEducationCode, String sidoOfficeOfEducation, String smallOfficeOfEducationCode, String getSmallOfficeOfEducation, Float latitude, Float longitude) {
+    public School(String id, String name, String grade, String anniversary, LocalDateTime establishForm, String mainSchool, String jiBunAddress, String roadNameAddress, String sidoOfficeOfEducationCode, String sidoOfficeOfEducation, String smallOfficeOfEducationCode, String smallOfficeOfEducation, Float latitude, Float longitude) {
         this.id = id;
         this.name = name;
         this.grade = grade;
@@ -33,7 +33,7 @@ public class School {
         this.sidoOfficeOfEducationCode = sidoOfficeOfEducationCode;
         this.sidoOfficeOfEducation = sidoOfficeOfEducation;
         this.smallOfficeOfEducationCode = smallOfficeOfEducationCode;
-        this.getSmallOfficeOfEducation = getSmallOfficeOfEducation;
+        this.smallOfficeOfEducation = smallOfficeOfEducation;
         this.latitude = latitude;
         this.longitude = longitude;
     }
@@ -83,7 +83,7 @@ public class School {
     }
 
     public String getGetSmallOfficeOfEducation() {
-        return getSmallOfficeOfEducation;
+        return smallOfficeOfEducation;
     }
 
     public Float getLatitude() {
@@ -94,4 +94,13 @@ public class School {
         return longitude;
     }
 
+    public String getSqlInsertQuery() {
+        String sql = String.format("INSERT INTO `test-db`.`nation_wide_school`\n" +
+                "VALUES\n" +
+                "(\"%s\", \"%s\", \"%s\", \"%s\", \"%s\", \"%s\", \"%s\",\n" +
+                "\"%s\", \"%s\", \"%s\", \"%s\", \"%s\", \"%s\", \"%s\"",
+                this.id, this.name, this.grade, this.anniversary, this.establishForm, this.mainSchool, this.jiBunAddress,
+                this.roadNameAddress, this.sidoOfficeOfEducationCode, this.sidoOfficeOfEducation, this.sidoOfficeOfEducationCode, this.smallOfficeOfEducation, this.latitude, this.longitude);
+        return sql;
+    }
 }
