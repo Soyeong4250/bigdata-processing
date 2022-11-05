@@ -45,7 +45,7 @@ public class FileController<T> {
         BufferedReader br;
 
 
-        br = new BufferedReader(new InputStreamReader(new FileInputStream(path), "EUC_KR"));
+        br = new BufferedReader(new InputStreamReader(new FileInputStream(path), encoding));
         String line;
         br.readLine();
         while((line = br.readLine()) != null) {
