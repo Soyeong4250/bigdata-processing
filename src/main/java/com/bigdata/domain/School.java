@@ -104,7 +104,7 @@ public class School {
         String sql = String.format("INSERT INTO `test-db`.`nation_wide_school`\n" +
                 "VALUES\n" +
                 "(\"%s\", \"%s\", \"%s\", \"%s\", \"%s\", \"%s\", \"%s\",\n" +
-                "\"%s\", \"%s\", \"%s\", \"%s\", \"%s\", \"%s\", \"%s\"",
+                "\"%s\", \"%s\", \"%s\", \"%s\", \"%s\", \"%s\", \"%s\")",
                 this.id, this.name, this.grade, this.anniversary, this.establishForm, this.mainSchool, this.jiBunAddress,
                 this.roadNameAddress, this.sidoOfficeOfEducationCode, this.sidoOfficeOfEducation, this.sidoOfficeOfEducationCode, this.smallOfficeOfEducation, this.latitude, this.longitude);
         return sql;
@@ -112,7 +112,7 @@ public class School {
 
     public String getTupleString() {
         String sql = String.format("(\"%s\", \"%s\", \"%s\", \"%s\", \"%s\", \"%s\", \"%s\",\n" +
-                "\"%s\", \"%s\", \"%s\", \"%s\", \"%s\", \"%s\", \"%s\"",
+                "\"%s\", \"%s\", \"%s\", \"%s\", \"%s\", \"%s\", \"%s\")",
                 this.id, this.name, this.grade, this.anniversary, this.establishForm, this.mainSchool, this.jiBunAddress,
                 this.roadNameAddress, this.sidoOfficeOfEducationCode, this.sidoOfficeOfEducation, this.sidoOfficeOfEducationCode, this.smallOfficeOfEducation, this.latitude, this.longitude);
 
